@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Calculator</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../app.css" />
+</head>
+
+<body>
+	<div class="container jumbotron bg-secondary">
+	
+					<form class="d-inline" id="task_text" th:action="@{'add'}" th:method="post">
+
+				     <input type="text" th:value="${operator1}"  name="operator1" />
+				     <input type="text" th:value="${operator2}"  name="operator2" />
+				     <input type="text" th:value="${result}" name="result" readonly />
+				     <input type="submit" value="+" />
+				</form>
+
+	</div>
+	<script src="/app.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
